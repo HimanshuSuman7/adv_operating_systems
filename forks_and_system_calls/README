@@ -1,0 +1,29 @@
+Submitted by: Himanshu Kumar Suman
+
+Interaction: I interacted with only a few of my friends - Shishir Gupta, Siddarth Vinze and Kumar Harshwardhan for the assignment of forks and system calls.
+
+File Structure:
+    1. main.c : contains the main function of the program
+    2. helper.h : header file for the program
+    3. child_helper.c : contains the functions required to spawn children from the parent
+    4. makefile : make file which is required to be executed
+
+How to compile the code?
+    1. unzip the file using the terminal
+    2. locate the folder in the terminal and type "make"
+        (this will create object files named as "child_helper.o" and "result.out")
+    3. now type "./result.out" followed by 3 numerical parameters - (even value, odd value, levels) to execute the program
+
+Description for the program:
+    - Firstly, the user needs to pass 3 inputs (even value, odd value and levels) which will be stored and used for execution
+    - Then, the program displays the PID of the parent and moves on to create its children
+    - Here, the program follows level order and creates children, parent exits only after its children are created and exited successfully
+    - Whenever, a child is created and exits, it will be displayed on the terminal
+    - no orphan and zombie processes are created
+
+What I was able to do and not able to do?
+    - Firstly, I was able to develop an intuition to create child processes in DFS manner. Then, I took this aproach further and developed  code to create child processes of parent first and then move to next level to create their children (Level Order).
+    - I was not able to code an approach to print child process in inorder manner.
+
+Why you did not manage to complete your assignment?
+    - I studied shared memory and tree impementation, but I was not able to implement it.
