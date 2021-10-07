@@ -42,6 +42,7 @@ void parent_spawns_child(int get_even, int get_odd, int tree_height)
             else if (id == 0)
             {
                 // storing pid_t values in array
+                // int temp = getpid();
                 child_arr[i] = getpid();
 
                 // printf("\t\tcheck child array, pid = %u\n", child_arr[i]);
@@ -59,16 +60,12 @@ void parent_spawns_child(int get_even, int get_odd, int tree_height)
                 parent_spawns_child(get_even, get_odd, --tree_height);
                 exit(0);
             }
-            else
-            {
-                sleep(1);
-                // printf("\tid = %u\n", child_arr[j]);
-                kill(0, SIGCONT);
-            }
         }
         // parent process waiting for all children to finish
-        int temp_range = decide_even_odd(getpid(), get_even, get_odd);
-        for (int j = 0; j < temp_range; j++)
+        // int temp_range = decide_even_odd(getpid(), get_even, get_odd);
+        sleep(1);
+        kill(0, SIGCONT);
+        for (int j = 0; j < range; j++)
         {
             retrive_id = wait(&status);
             printf("child pid = %d exited. exit status = %d\n", retrive_id, status / 256);
