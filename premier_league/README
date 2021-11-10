@@ -1,0 +1,31 @@
+Submitted by: Himanshu Kumar Suman
+
+Interaction: I did not interact with any of my classmates regarding this assignment.
+
+File Structure:
+    1. main.c : contains the main function of the program
+    2. project.h : header file for all the files
+    3. parent.c : contains the parent process (in premier terms => Premier League Board) which will spawn managers and then proceed to simulate the league season
+    4. simulate_match.c : contains all the functions required to simulate single/multiple matches
+    5. makefile : make file which is required to be executed
+    6. input1.txt / input2.txt : examples for running the assignment 
+
+How to compile the code?
+    1. unzip the file using the terminal
+    2. locate the folder in the terminal and type "make"
+        (this will create object files named as "parent.o", "simulate_match.o" and "result.out")
+    3. now type "./result.out" followed by name of the input file as parameter to execute the program
+
+Description for the program:
+    - Firstly, the user needs to pass the input file containing number of teams and league fixtures which will be stored and used for execution
+    - Then, the program displays the list of fixtures, managers (created as children)
+    - Here, the program then proceeds to simulate matches in the order given in the input file along with the result
+
+What I was able to do and not able to do?
+    - I was only able to develop an intuition to create child processes from the parent process (premier league board). Then, I was only able to simulate matches based on the input file
+    - I was not able to code apply shared memory to simulate child processes simulataneously (I wrote few lines but they were very buggy). I was not able to prepare the final season table because I got the sorting mechanism wrong.
+    - I forked child processes from the parent process, but I was not able to retain the process ids of the children process into the array due to some unknown issue in my code.
+
+Why you did not manage to complete your assignment?
+    - I tried to use shared memory but after a lot of efforts I was not able to implement it.
+    - I tried to minimize my space complxity because I have used a lot of arrays, but I was not able to minimize the same.
