@@ -1,0 +1,50 @@
+sleep(1);
+        kill(0, SIGCONT);
+        for (int j = 0; j < N; j++)
+        {
+            retrive_id = wait(&status);
+            printf("child pid = %d exited. exit status = %d\n", retrive_id, status / 256);
+        }
+
+for parent process
+___
+
+pid_t pid[11]={0};
+    for(int i = 0; i < n; i++)
+    {
+        if(fork() == 0)
+        {
+            pid[i] = getpid();
+        }
+    }
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d ", pid[i]);
+    }
+
+    void create_child_proc(int N, pid_t *track_manager_pid)
+{
+    for (int i = 0; i < N; i++)
+    {
+        // calling fork, child will execute after this
+        pid_t id = fork();
+        if (id < 0)
+        {
+            // process not created
+            perror("fork failed.\n");
+            exit(0);
+        }
+        else if (id == 0)
+        {
+            // storing pid_t values in array
+            track_manager_pid[i] = getpid();
+            printf("child created, pid = %u, ppid = %u\n", getpid(), getppid());
+
+            // using signal to pause child process
+            kill(track_manager_pid[i], SIGSTOP);
+            sleep(1);
+        }
+        sleep(1);
+    }
+}
