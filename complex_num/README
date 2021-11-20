@@ -1,0 +1,34 @@
+Submitted by: Himanshu Kumar Suman
+
+Interaction: I did not interact with Kumar Harshwardhan regarding this assignment.
+
+File Structure:
+    1. main.c : contains the driver code of the program
+    2. project.h : header file containing all necessary declarations
+    3. threads.c : contains function to create threads and its runner functions as per the requirement of the assignment
+    5. makefile : make file which is required for execution
+    6. input1.txt : contains an example (odd scenario) of the input file
+
+How to compile the code?
+    1. unzip the file using the terminal
+    2. locate the folder in the terminal and type "make"
+        (this will create object files named as "threads.o" and "result.out")
+    3. now type "./result.out" followed by name of the input file as parameter to execute the program
+
+Description for the program:
+    - First step is to prepare an input file containing the complex numbers. Please restrict yourself from using any other format other than (a + ib), where a and b are integers and it is mandatory to add spaces as per the format.
+    - Now, that the input file is ready, driver function will take the command line arguments and store the contents of the file.
+    - Driver function will print the complex numbers from the file.
+    - Then, it will print the pthread_id, pid and threadid of the parent process.
+    - Now, the code will proceed to create the threads by calling create_threads() function. Here, the threads will be created and intermediate results of complex multiplication will be printed. 
+    - Here in threads.c, I have created 3 runner functions based on different scenarios that I encountered.
+    - And finally, I have taken care of the odd and even case. 
+
+What I was able to do and not able to do?
+    - I was able to complete all the requirements of the assignment.
+
+Why you did not manage to complete your assignment?
+    - I have completed the assignment.
+
+Bugs?
+    - I couldn't find any bugs. (to my knowledge)
