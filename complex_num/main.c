@@ -118,5 +118,6 @@ int main(int argc, char *argv[])
 
     // creating threads
     create_threads(floor(N / 2));
+     
     return 0;
 }
