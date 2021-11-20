@@ -1,16 +1,16 @@
 Submitted by: Himanshu Kumar Suman
 
-Interaction: I did not interact with Kumar Harshwardhan regarding this assignment.
+Interaction: I did interact with Kumar Harshwardhan regarding this assignment.
 
 File Structure:
     1. main.c : contains the driver code of the program
     2. project.h : header file containing all necessary declarations
     3. threads.c : contains function to create threads and its runner functions as per the requirement of the assignment
-    5. makefile : make file which is required for execution
-    6. input1.txt : contains an example (odd scenario) of the input file
+    4. makefile : make file which is required for execution
+    5. input1.txt : contains an example (odd scenario) of the input file
 
 How to compile the code?
-    1. unzip the file using the terminal
+    1. unzip the file using the terminal "tar –xvzf 2021H1030066G_himanshu_complex_numbers.tar.gz"
     2. locate the folder in the terminal and type "make"
         (this will create object files named as "threads.o" and "result.out")
     3. now type "./result.out" followed by name of the input file as parameter to execute the program
